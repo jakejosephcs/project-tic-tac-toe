@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="/scripts/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="player-selection" id="playerSelection">
+        <div class="player1">
+            <h3>Player 1</h3>
+            <label for="name">Name:
+                <input type="text" name="name" id="name">
+            </label>
+            <label for="choice">Choice:
+                <select name="choice" id="choice">
+                    <option value="x">X</option>
+                    <option value="o">O</option>
+                </select>
+            </label>
+            <input type="button" value="Enter Game">
+        </div>
+        <div class="player2">
+            <h3>Player 2</h3>
+            <label for="name">Name:
+                <input type="text" name="name" id="name">
+            </label>
+            <label for="choice">Choice:
+                <select name="choice" id="choice">
+                    <option value="x">X</option>
+                    <option value="o">O</option>
+                </select>
+            </label>
+            <input type="button" value="Enter Game">
+        </div>
+        <button class="start-player1-player2">Start</button>
+        <h2>OR</h2>
+        <div class="player">
+            <h3>Player</h3>
+            <label for="name">Name:
+                <input type="text" name="name" id="name">
+            </label>
+            <label for="choice">Choice:
+                <select name="choice" id="choice">
+                    <option value="x">X</option>
+                    <option value="o">O</option>
+                </select>
+            </label>
+            <input type="button" value="Enter Game">
+        </div>
+        <div class="pc">
+            <h3>PC</h3>
+            <input type="button" value="Enter Game">
+        </div>
+        <button class="start-player-pc">Start</button>
+    </div>
+
+    <div class="game">
+        <div class="board circle" id="board">
+            <div class="cell x" data-cell></div>
+            <div class="cell circle" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+
+        <div class="turn">
+            <span id="symbol" class="symbol">X</span>
+            <span id="whosTurn" class="whos-turn">Player 1 Turn</span>
+        </div>
+
+        <button class="restart" type="reset">Restart</button>
+    </div>
+</body>
+</html>

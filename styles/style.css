@@ -1,0 +1,197 @@
+/* TABLE OF CONTENTS 
+    1. General
+    2. Player, PC Input
+    3. Gameboard 
+
+*/
+
+
+/* 
+    ======================
+    1. General
+    ======================
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+    ======================
+    2. Player, PC Input
+    ======================
+*/
+
+.player-selection {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(auto, 200px));
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: 
+        "p1 p2"
+        "stp1p2 stp1p2"
+        "or  or"
+        "p  pc"
+        "stppc stppc";
+    margin: 2rem auto;
+    width: 80%;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.player1, .player2, .player, .pc {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.player1 {
+    grid-area: p1;
+}
+
+.player2 {
+    grid-area: p2;
+}
+
+.player {
+    grid-area: p;
+}
+
+.pc {
+    grid-area: pc;
+}
+
+.player-selection h2 {
+    grid-area: or;
+    justify-self: center;
+    margin: 2rem 0;
+}
+
+.start-player1-player2,
+.start-player-pc{
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    font-size: 1rem;
+    margin: .5rem auto;
+    border: none
+}
+
+.start-player1-player2 {
+    grid-area: stp1p2;
+}
+
+.start-player-pc{
+    grid-area: stppc;
+}
+
+/* 
+    ======================
+    3. Gameboard
+    ======================
+*/
+
+.game {
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto,100px));
+    grid-auto-rows: minmax(auto, 100px);
+    margin: 2rem auto;
+    width: 80%;
+    justify-content: center;
+    
+}
+
+.board > div {
+    min-width: 100px;
+    border: 1px solid black;
+}
+
+.board > div:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.turn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.turn .symbol {
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.turn .whos-turn {
+    font-size: 1.5rem;
+    margin: 1rem;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.restart {
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    justify-content: center;
+    width: 10%;
+    height: 20px;
+    align-items: center;
+    font-size: 1rem;
+    margin: .5rem auto;
+    border: none
+}
+
+.cell.x {
+    background-image: url(/images/X.png);
+    background-size: cover;
+}
+
+.cell.circle {
+    background-image: url(/images/O.png);
+    background-size: cover;
+}
+
+.board.x div:hover {
+    background-image: url(/images/X.png);
+    opacity: 0.5;
+    background-size: cover;
+}
+
+.board.circle div:hover {
+    background-image: url(/images/O.png);
+    opacity: 0.5;
+    background-size: cover;
+}
